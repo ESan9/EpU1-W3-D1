@@ -88,14 +88,40 @@ console.log(sommaNum1([1, 2, 3]));
   Scrivi una funzione che, dato un array di soli numeri e un numero n come parametri, ritorni un secondo array con tutti i valori del precedente incrementati di n
 */
 
+const incrementaArray = function (array, n) {
+  return array.map(function (numero) {
+    return numero + n;
+  });
+};
+
+console.log(incrementaArray([1, 2, 3], 1));
+
 /* ESERCIZIO 7 (map)
   Scrivi una funzione che, dato un array di stringhe, ritorni un nuovo array contenente le lunghezze delle rispettive stringhe dell'array di partenza
   es.: ["EPICODE", "is", "great"] => [7, 2, 5]
 */
 
+const lunghezzaArrStringhe = function (array) {
+  return array.map(function (stringhe) {
+    return stringhe.length;
+  });
+};
+
+console.log(lunghezzaArrStringhe(["EPICODE", "is", "great"]));
+
 /* ESERCIZIO 8 (forEach o for)
   Scrivi una funzione per creare un array contenente tutti i valori DISPARI da 1 a 99.
 */
+
+const arrayOfDispari = function () {
+  let a1 = [];
+  for (let i = 1; i < 100; i += 2) {
+    a1.push(i);
+  }
+  return a1;
+};
+
+console.log(arrayOfDispari());
 
 /* Questo array di film verrà usato negli esercizi a seguire. Non modificarlo e scorri oltre per riprendere gli esercizi :) */
 const movies = [
